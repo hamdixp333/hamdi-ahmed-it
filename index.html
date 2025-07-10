@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>موقعي الشخصي</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مدونتي الشخصية</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+  }
+  header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background: #333;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background: #575757;
+  }
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  article {
+    margin-bottom: 30px;
+  }
+  article h2 {
+    color: #333;
+  }
+  article p {
+    line-height: 1.6;
+    color: #555;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    margin-top: 30px;
+  }
+</style>
 </head>
 <body>
-    <h1>مرحبًا بكم في موقعي</h1>
-    <p>هذا الموقع يحتوي على مدونات وروابط مفيدة.</p>
+
+<header>
+  <h1>مدونتي الشخصية</h1>
+</header>
+
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#articles">مقالاتي</a>
+  <a href="#about">عن المدونة</a>
+  <a href="#contact">اتصل بي</a>
+</nav>
+
+<main>
+  <section id="articles">
+    <article>
+      <h2>عنوان المقال الأول</h2>
+      <p>هذه هي الفقرة الأولى من المقالة، يمكنك استبدال هذا النص بمحتوى مقالاتك بسهولة.</p>
+    </article>
+    <article>
+      <h2>عنوان المقال الثاني</h2>
+      <p>هذا مكان رائع لتشارك أفكارك وخبراتك مع القراء، فقط قم بتعديل النصوص كما تريد.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 مدونتي الشخصية - جميع الحقوق محفوظة
+</footer>
+
 </body>
 </html>
