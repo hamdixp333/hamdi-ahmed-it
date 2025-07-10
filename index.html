@@ -87,16 +87,24 @@
 <nav>
   <a href="#home">الرئيسية</a>
   <a href="#articles">مقالاتي</a>
-  <a href="#about">عن المدونة</a>
-  <a href="#contact">تواصل معي</a><form action="mailto:hamdixp333@gmail.com" method="post" enctype="text/plain">
-  الاسم:<br>
-  <input type="text" name="name"><br>
-  البريد الإلكتروني:<br>
-  <input type="email" name="email"><br>
-  الرسالة:<br>
-  <textarea name="message" rows="5" cols="30"></textarea><br><br>
-  <input type="submit" value="إرسال">
-  <input type="reset" value="إعادة تعيين">
+  <a href="#about">عن المدونة</a
+                           <section id="contact" style="padding: 20px; background-color: #f4f4f4;">
+  <h2>اتصل بي</h2>
+  <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+    <label for="name">الاسم:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+
+    <label for="email">البريد الإلكتروني:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;"><br><br>
+
+    <label for="message">الرسالة:</label><br>
+    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+    <input type="submit" value="إرسال" style="padding: 10px 15px; background-color: #007BFF; color: white; border: none; cursor: pointer;">
+    <input type="reset" value="إعادة تعيين" style="padding: 10px 15px; margin-left: 10px; background-color: #6c757d; color: white; border: none; cursor: pointer;">
+  </form>
+</section>
+    
 </form>
 
 </nav>
@@ -105,6 +113,7 @@
   <article id="articles">
     <h2>رحلة تطوير الذات: كيف تصبح نسخة أفضل من نفسك؟</h2>
     <p>
+    
       في عالم سريع التغير، يصبح تطوير الذات ضرورة لا غنى عنها لكل من يريد أن يحقق النجاح ويعيش حياة مُرضية. تطوير الذات هو الاستثمار الأفضل الذي يمكنك القيام به، لأنه يبني مهاراتك ويزيد من ثقتك بنفسك.
     </p>
     <p>
