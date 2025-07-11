@@ -1,162 +1,115 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>مدونتي الأنيقة</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f7fb;
-    margin: 0; padding: 0;
-    color: #333;
-  }
-  header {
-    background-color: #009688;
-    padding: 25px 15px;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  nav {
-    background-color: #00796b;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-  }
-  nav a {
-    color: #e0f2f1;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  nav a:hover {
-    background-color: #004d40;
-  }
-  main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
-  article {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    padding: 25px 30px;
-    line-height: 1.7;
-  }
-  article h2 {
-    color: #00796b;
-    margin-top: 0;
-    font-size: 28px;
-  }
-  article p {
-    font-size: 17px;
-    color: #444;
-  }
-  footer {
-    background-color: #004d40;
-    color: #b2dfdb;
-    text-align: center;
-    padding: 18px 10px;
-    font-size: 14px;
-    margin-top: 50px;
-  }
-  @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      gap: 5px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>آخر أخبار العالم</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2196f3;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
     main {
-      margin: 20px 10px;
-      padding: 0 10px;
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 15px;
     }
-  }
-</style>
+    section {
+      background-color: #fff;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    h2 {
+      color: #1976d2;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 5px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .news-item {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-item h3 {
+      margin: 0 0 8px 0;
+      color: #0d47a1;
+    }
+    .news-item p {
+      margin: 0;
+    }
+    footer {
+      background-color: #2196f3;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>آخر أخبار العالم</h1>
+  </header>
+  <main>
+    <section>
+      <h2>معرض صور من مختلف أنحاء العالم</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=400&q=80" alt="مناظر طبيعية" />
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=400&q=80" alt="مدينة ليلية" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="مباني حديثة" />
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="شروق الشمس" />
+      </div>
+    </section>
 
-<header>مدونتي الأنيقة</header>
-
-<nav>
-  <a href="#home">الرئيسية</a>
-  <a href="#articles">مقالاتي</a>
-  <a href="#about">عن المدونة</a
-                           <section id="contact" style="padding: 20px; background-color: #f4f4f4;">
-  <h2>اتصل بي</h2>
-  <form action="mailto:hamdixp333@gmail.com" method="post" enctype="text/plain">
-    <label for="name">الاسم:</label><br>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
-
-    <label for="email">البريد الإلكتروني:</label><br>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;"><br><br>
-
-    <label for="message">الرسالة:</label><br>
-    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px;"></textarea><br><br>
-
-    <input type="submit" value="إرسال" style="padding: 10px 15px; background-color: #007BFF; color: white; border: none; cursor: pointer;">
-    <input type="reset" value="إعادة تعيين" style="padding: 10px 15px; margin-left: 10px; background-color: #6c757d; color: white; border: none; cursor: pointer;">
-  </form>
-</section>
-    
-</form>
-
-</nav>
-
-<main>
-  <article id="articles">
-    <h2>رحلة تطوير الذات: كيف تصبح نسخة أفضل من نفسك؟</h2>
-    <p>
-    
-      في عالم سريع التغير، يصبح تطوير الذات ضرورة لا غنى عنها لكل من يريد أن يحقق النجاح ويعيش حياة مُرضية. تطوير الذات هو الاستثمار الأفضل الذي يمكنك القيام به، لأنه يبني مهاراتك ويزيد من ثقتك بنفسك.
-    </p>
-    <p>
-      تبدأ رحلة التطوير بالوعي الذاتي—فهم نقاط قوتك وضعفك، ثم وضع أهداف واضحة يسهل قياس تقدمك نحوها. التعلم المستمر والانضباط في بناء العادات الإيجابية هما العمودان الأساسيان لهذا الطريق.
-    </p>
-    <p>
-      لا تخف من التحديات، فهي فرص لتعلم مهارات جديدة واكتشاف إمكانياتك الخارقة. تذكر أن كل خطوة تخطوها باتجاه تطوير نفسك هي استثمار في مستقبلك وأساس لحياة أكثر إشراقاً ونجاحاً.
-    </p>
-  </article>
-</main>
-<article>
-  <h2>ما هو الإيراد؟</h2>
-  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="إيراد ونمو مالي" style="max-width:100%; height:auto;">
-  <p>
-    الإيراد هو المبلغ الإجمالي الذي تحققه الشركة من بيع منتجاتها أو خدماتها خلال فترة زمنية محددة.  
-    يعد الإيراد من أهم المؤشرات المالية التي تساعد في تقييم أداء الأعمال ونموها.  
-    الشركات تهدف دائماً إلى زيادة إيراداتها لتعزيز الربحية والاستمرارية.
-  </p>
-  <p>
-    يمكن تقسيم الإيراد إلى أنواع مختلفة، مثل الإيراد التشغيلي والإيراد غير التشغيلي، وكل نوع يعكس جانب معين من نشاط الشركة.  
-    مراقبة الإيراد بانتظام تساعد الإدارة في اتخاذ القرارات الاستراتيجية الصحيحة.
-  </p>
-</article>
-<article>
-  <h2>.الثقة في النفس والاكتفاء الذاتي</h2>
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="ثقة بالنفس واكتفاء ذاتي" style="max-width:100%; height:auto;">
-  <p>
-    الثقة في النفس هي أساس النجاح في كل جوانب الحياة. عندما تؤمن بقدراتك وتقدر قيمتك، يمكنك مواجهة التحديات بثبات وقوة.  
-    الاكتفاء الذاتي يعني الاعتماد على النفس في تحقيق الأهداف دون انتظار الاعتماد على الآخرين، مما يعزز الاستقلالية والشعور بالرضا الداخلي.
-  </p>
-  <p>
-    لتطوير الثقة في النفس، قم بتحديد أهداف قابلة للتحقيق، واحتفل بنجاحاتك الصغيرة، وتعلم من الأخطاء بدون لوم مفرط. أيضًا، مارس التفكير الإيجابي وابتعد عن مقارناتك بالآخرين.  
-    الاكتفاء الذاتي يمنحك القوة على اتخاذ القرارات بثقة ويساعدك على النمو الشخصي المستمر.
-  </p>
-  <p>
-    تذكر دائماً أن الثقة في نفسك ليست شيئًا يولد معك فقط، بل هي مهارة يمكن تعلمها وتطويرها مع الوقت والممارسة.
-  </p>
-</article>
-
-<footer>
-  &copy; 2025 مدونتي الأنيقة - جميع الحقوق محفوظة
-</footer>
-
+    <section>
+      <h2>آخر الأخبار</h2>
+      <div class="news-item">
+        <h3>تطورات جديدة في العلاقات الدولية</h3>
+        <p>تستمر الجهود الدبلوماسية لحل الصراعات وتحقيق السلام في مناطق النزاع العالمية.</p>
+      </div>
+      <div class="news-item">
+        <h3>الاقتصاد العالمي يشهد نموًا متزايدًا</h3>
+        <p>تشير التقارير إلى تحسن في مؤشرات السوق وزيادة الطلب على السلع والخدمات.</p>
+      </div>
+      <div class="news-item">
+        <h3>تكنولوجيا جديدة تغير مستقبل العمل</h3>
+        <p>ظهور تقنيات الذكاء الاصطناعي والروبوتات يفتح آفاقا جديدة أمام مختلف الصناعات.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025
+  </footer>
 </body>
 </html>
-
