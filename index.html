@@ -1,144 +1,195 @@
+@SAMI_AIB بالتأكيد! إليك الكود الكامل لموقع متجر الخدمات الإلكترونية العصري والفخم مع صفحة تسجيل الدخول:
 
+```html
 <!DOCTYPE html>
-
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>موقع حمدي أحمد</title>
+  <title>متجر الخدمات الإلكترونية الفخم</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #333;
-    }
-    nav {
-      background-color: #007bff;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #007bff;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    p {
-      font-size: 18px;
-      text-align: justify;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #007bff;
-      color: white;
-      position: fixed;
-      bottom: 0;
+
+    header {
+      max-width: 1200px;
       width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f39c12;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #f39c12;
+    }
+
+    main {
+      max-width: 1200px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(243, 156, 18, 0.7);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    .services {
+      flex: 2;
+      padding: 40px;
+    }
+
+    .services h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #f39c12;
+      border-bottom: 3px solid #f39c12;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .service-item {
+      background-color: rgba(255, 255, 255, 0.15);
+      margin-bottom: 20px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 15px #f39c12;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #f39c12;
+    }
+
+    .service-item h3 {
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .service-item p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    .login {
+      flex: 1;
+      background-color: #1e272e;
+      padding: 40px 30px;
+      border-left: 5px solid #f39c12;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login h2 {
+      color: #f39c12;
+      margin-bottom: 30px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      font-size: 1rem;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #f39c12;
+      border: none;
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #1e272e;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d48806;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-weight: 600;
+      color: #f39c12;
+      text-align: center;
+      letter-spacing: 1.2px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        flex-direction: column;
+      }
+
+      .login {
+        border-left: none;
+        border-top: 5px solid #f39c12;
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#about">من نحن</a>
-    <a href="#services">خدماتنا</a>
-    <a href="#contact">اتصل بنا</a>
-  </nav>
+<header>
+  <h1>متجر الخدمات الإلكترونية</h1>
+</header>
 
-  <section id="home">
-    <h1>مرحباً بك في موقع حمدي أحمد</h1>
-    <p>
-	      هذا الموقع يقدم لك أفضل الخدمات في مجال التقنية والبرمجة. تصفح الأقسام المختلفة للاستفادة من كل ما نقدمه.
-    </p>
-  </section>
+<main>
+  <section class="services">
+    <h2>خدماتنا الفاخرة</h2>
 
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>
-      نحن فريق متخصص في تطوير المواقع الإلكترونية والتطبيقات المحمولة. نعمل بجد لتقديم حلول مبتكرة تلبي احتياجات عملائنا.
-    </p>
-  </section>
+    <div class="service-item">
+      <h3>تصميم مواقع احترافي</h3>
+      <p>تصاميم عصرية ومتجاوبة تناسب جميع الأجهزة وتعزز ظهور علامتك التجارية.</p>
+    </div>
 
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <p>
-      نقدم خدمات تصميم وتطوير مواقع الانترنت، برمجة تطبيقات الجوال، استشارات تقنية، والدعم الفني المستمر.
-    </p>
-  </section>
+    <div class="service-item">
+      <h3>إدارة وسائل التواصل الاجتماعي</h3>
+      <p>رفع التفاعل وزيادة المتابعين من خلال حملات إبداعية مدروسة بعناية.</p>
+    </div>
 
-  <section id="contact">
-    <h2>اتصل بنا</h2>
-    <p>
-      يمكنك التواصل معنا عبر البريد الإلكتروني: <a href="mailto:hamdixp333@gmail.com">contact@hamdi.com</a><br />
-    </p>
-  </section>
-
-  <footer>
-    &copy; 2025 موقع حمدي أحمد - جميع الحقوق محفوظة
-  </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>نموذج ألوان</title>
-<style>
-  body {
-    background-color: #3A86FF;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #90E0EF;
-  }
-  button {
-    background-color: #023E8A;
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  button:hover {
-    background-color: #90E0EF;
-    color: #023E8A;
-  }
-</style>
-</head>
-<body>
-  <h1>مرحبًا بكم في موقعي</h1>
-</body>
-</html>
+    <div class="service-it...
